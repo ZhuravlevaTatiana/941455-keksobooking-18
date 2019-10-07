@@ -16,7 +16,7 @@ var createRandomDate = function () {
         avatar: getRandomItemFromArray(img / avatars / user0),
       },
       offer: {
-        title:,
+        title: getRandomItemFromArray(),
         address: getRandomItemFromArray(),
         price: getRandomItemFromArray(),
         type: getRandomItemFromArray(),
@@ -32,6 +32,7 @@ var createRandomDate = function () {
         x: getRandomItemFromArray(),
         y: getRandomItemFromArray(),
       }
-    }),
+    })
     return dateArray;
-  };
+  }
+};
