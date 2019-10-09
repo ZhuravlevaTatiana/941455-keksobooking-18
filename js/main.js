@@ -1,7 +1,7 @@
 'use strict';
 var activeMap = document.querySelector('.map');
 activeMap.classList.remove('.map--faded');
-DATES_LENGTH = 8;
+var DATES_LENGTH = 8;
 var random = function (min, max) {
   return Math.round(min - 0.5 + Math.random() * (max - min + 1));
 };
@@ -42,7 +42,7 @@ var similarDateTemplate = document.querySelector('#pin');
 var render = function (date) {
   var dateElement = similarDateTemplate.cloneNode(true);
   dateElement.querySelector('.').textContent = date.location;
-  return wizardElement;
+  return dateElement;
 };
 var fragment = document.createDocumentFragment();
 for (var i = 0; i < dates.length; i++) {
