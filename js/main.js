@@ -13,7 +13,7 @@ var createRandomDate = function () {
   for (var i = 0; i <= DATES_LENGTH; i++) {
     dateArray.push({
       author: {
-        avatar: getRandomItemFromArray(img / avatars / user0),
+        avatar: getRandomItemFromArray(),
       },
       offer: {
         title: getRandomItemFromArray(),
@@ -36,3 +36,17 @@ var createRandomDate = function () {
     return dateArray;
   }
 };
+var dates = createRandomDate();
+var similarListElement = document.querySelector('.map__pin');
+var similarDateTemplate = document.querySelector('#pin');
+var render = function (date) {
+  var dateElement = similarDateTemplate.cloneNode(true);
+  dateElement.querySelector('.').textContent = date.location;
+  return wizardElement;
+};
+var fragment = document.createDocumentFragment();
+for (var i = 0; i < dates.length; i++) {
+  fragment.appendChild(render(dates[i]));
+}
+similarListElement.appendChild(fragment);
+
