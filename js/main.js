@@ -33,8 +33,8 @@ var createRandomDate = function () {
         y: getRandomItemFromArray(),
       }
     })
-    return dateArray;
   }
+  return dateArray;
 };
 var dates = createRandomDate();
 var similarListElement = document.querySelector('.map__pin');
@@ -47,6 +47,6 @@ var render = function (date) {
 var fragment = document.createDocumentFragment();
 for (var i = 0; i < dates.length; i++) {
   fragment.appendChild(render(dates[i]));
-}
+};
 similarListElement.appendChild(fragment);
 
