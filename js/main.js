@@ -32,7 +32,7 @@ var createRandomDate = function () {
         x: getRandomItemFromArray(),
         y: getRandomItemFromArray(),
       }
-    })
+    });
   }
   return dateArray;
 };
@@ -47,6 +47,6 @@ var render = function (date) {
 var fragment = document.createDocumentFragment();
 for (var i = 0; i < dates.length; i++) {
   fragment.appendChild(render(dates[i]));
-};
+}
 similarListElement.appendChild(fragment);
 
