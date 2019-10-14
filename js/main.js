@@ -20,7 +20,7 @@ var getRandomFromArr = function (array, count) {
   }
   return result;
 };
-var generateAd = function () {
+var generateBlock = function () {
   var block = [];
   var BLOCK_NUMBER = 8;
   var OFFER_TYPES = ['palace', 'flat', 'house', 'bungalo'];
@@ -64,4 +64,5 @@ var generateAd = function () {
   }
   return block;
 };
+var block = generateBlock();
 
