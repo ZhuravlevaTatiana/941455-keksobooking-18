@@ -21,8 +21,8 @@ var getRandomFromArr = function (array, count) {
   return result;
 };
 var generateAd = function () {
-  var ads = [];
-  var ADS_NUMBER = 8;
+  var block = [];
+  var BLOCK_NUMBER = 8;
   var OFFER_TYPES = ['palace', 'flat', 'house', 'bungalo'];
   var CHECK_TIMES = ['12:00', '13:00', '14:00'];
   var OFFER_FEATURES = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
@@ -31,12 +31,14 @@ var generateAd = function () {
     'http://o0.github.io/assets/images/tokyo/hotel2.jpg',
     'http://o0.github.io/assets/images/tokyo/hotel3.jpg'
   ];
-  for (var i = 0; i < ADS_NUMBER; i++) {
+  for (var i = 0; i < BLOCK_NUMBER; i++) {
+    var mapWidth;
+    var PIN_WIDTH;
     var locationX = Math.floor(Math.random() * (mapWidth - PIN_WIDTH));
     var locationY = 130 + Math.floor(Math.random() * 500);
     var featuresNumber = 1 + Math.floor(Math.random() * (OFFER_FEATURES.length - 1));
     var photosNumber = 1 + Math.floor(Math.random() * (OFFER_PHOTOS.length - 1));
-    var ad = {
+    var item = {
       'author': {
         'avatar': 'img/avatars/user0' + (i + 1) + '.png'
       },
@@ -58,9 +60,9 @@ var generateAd = function () {
         'y': locationY
       }
     };
-    ads.push(ad);
+    block.push(item);
   }
-  return ads;
+  return block;
 };
-var ads = generateAd();
+var block = generateAd();
 
