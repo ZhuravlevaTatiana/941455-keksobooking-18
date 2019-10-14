@@ -64,5 +64,4 @@ var generateAd = function () {
   }
   return block;
 };
-var block = generateAd();
 
